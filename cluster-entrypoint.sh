@@ -4,7 +4,7 @@ set -e
 
 # Change .erlang.cookie permission
 chmod 400 /var/lib/rabbitmq/.erlang.cookie
-
+touch /var/log/rabbitmq/running.log
 # Get hostname from enviromant variable
 HOSTNAME=`env hostname`
 echo "Starting RabbitMQ Server For host: " $HOSTNAME
